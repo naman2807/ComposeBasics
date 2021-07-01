@@ -46,7 +46,7 @@ fun MyApp(content: @Composable () -> Unit){
 // the composable at different places on the screen, each copy will get its own version
 // of the state. You can think of internal state as a private variable in a class.
 @Composable
-fun Counter(){
+fun Counter(count: Int, updateCount: (Int) -> Unit){
     val count = remember { mutableStateOf(0) }
     Button(onClick = { count.value++ }) {
         Text("I've been clicked ${count.value} times")
