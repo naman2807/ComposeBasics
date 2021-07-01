@@ -48,7 +48,7 @@ fun MyApp(content: @Composable () -> Unit){
 @Composable
 fun Counter(){
     val count = remember { mutableStateOf(0) }
-    Button() {
+    Button(onClick = { count.value++ }) {
 
     }
 }
