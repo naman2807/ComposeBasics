@@ -31,7 +31,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp(){
     ComposeBasicsTheme {
+        Surface {
 
+        }
     }
 }
 
