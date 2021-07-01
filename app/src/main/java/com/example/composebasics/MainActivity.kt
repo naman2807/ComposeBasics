@@ -5,10 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -43,9 +40,17 @@ fun MyApp(content: @Composable () -> Unit){
     }
 }
 
+//To add internal state to a composable, use the mutableStateOf function,
+// which gives a composable mutable memory. To not have a different state for every
+// , remember the mutable state using remember. And, if there are multiple instances of
+// the composable at different places on the screen, each copy will get its own version
+// of the state. You can think of internal state as a private variable in a class.
 @Composable
 fun Counter(){
     val count = remember { mutableStateOf(0) }
+    Button() {
+
+    }
 }
 
 @Composable
