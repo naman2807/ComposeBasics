@@ -59,6 +59,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     MyApp{
-        Greeting(name = "Android")
+        MyScreenContent()
     }
 }
