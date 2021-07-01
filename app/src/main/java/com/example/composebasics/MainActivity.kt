@@ -18,13 +18,17 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           MyApp()
+           MyApp {
+               Greeting(name = "Android")
+           }
         }
     }
 }
 
 //You return Unit because, as you might have noticed, Composable functions don't return
 // UI components, they emit them. That's why they must return Unit
+//Watch out for the extra parentheses in @Composable() when using a Composable function as
+// a parameter. Since the annotation is applied on a function, they're needed!
 @Composable
 fun MyApp(content : @Composable() -> Unit){
     ComposeBasicsTheme {
