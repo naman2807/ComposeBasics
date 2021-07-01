@@ -47,9 +47,8 @@ fun MyApp(content: @Composable () -> Unit){
 // of the state. You can think of internal state as a private variable in a class.
 @Composable
 fun Counter(count: Int, updateCount: (Int) -> Unit){
-    val count = remember { mutableStateOf(0) }
-    Button(onClick = { count.value++ }) {
-        Text("I've been clicked ${count.value} times")
+    Button(onClick = { updateCount(count + 1) }) {
+        Text("I've been clicked ${count} times")
     }
 }
 
