@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
            MyApp {
-               Greeting(name = "Android")
+               MyScreenContent()
            }
         }
     }
@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp(content: @Composable () -> Unit){
     ComposeBasicsTheme {
-        Surface {
+        Surface(color = Color.Yellow) {
             content()
         }
     }
@@ -52,9 +52,7 @@ fun MyScreenContent(){
 
 @Composable
 fun Greeting(name: String) {
-    Surface(color = Color.Yellow) {
-        Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
-    }
+    Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
 }
 
 @Preview(showBackground = true)
