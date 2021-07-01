@@ -42,7 +42,7 @@ fun MyApp(content: @Composable () -> Unit){
 }
 
 @Composable
-fun MyScreenContent(){
+fun MyScreenContent(names: List<String> = listOf("Android", "There")){
     Column{
         Greeting(name = "Android")
         Divider(color = Color.Black)
