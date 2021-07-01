@@ -43,7 +43,7 @@ fun MyApp(content: @Composable () -> Unit){
 @Composable
 fun MyScreenContent(){
     Column{
-
+        Greeting(name = "Android")
     }
 }
 
