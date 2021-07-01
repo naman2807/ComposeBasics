@@ -23,11 +23,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//You return Unit because, as you might have noticed, Composable functions don't return
+// UI components, they emit them. That's why they must return Unit
 @Composable
 fun MyApp(content : @Composable() -> Unit){
     ComposeBasicsTheme {
         Surface {
-            Greeting(name = "Android")
+            content()
         }
     }
 }
