@@ -30,7 +30,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(){
+    ComposeBasicsTheme {
 
+    }
 }
 
 @Composable
