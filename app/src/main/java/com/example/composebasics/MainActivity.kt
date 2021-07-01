@@ -44,9 +44,9 @@ fun MyApp(content: @Composable () -> Unit){
 @Composable
 fun MyScreenContent(names: List<String> = listOf("Android", "There")){
     Column{
-        Greeting(name = "Android")
-        Divider(color = Color.Black)
-        Greeting(name = "There")
+       for(name in names){
+
+       }
     }
 }
 
