@@ -42,7 +42,5 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ComposeBasicsTheme {
-        Greeting("Android")
-    }
+    MyApp()
 }
