@@ -3,6 +3,7 @@ package com.example.composebasics
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -41,7 +42,9 @@ fun MyApp(content: @Composable () -> Unit){
 
 @Composable
 fun MyScreenContent(){
+    Column{
 
+    }
 }
 
 @Composable
