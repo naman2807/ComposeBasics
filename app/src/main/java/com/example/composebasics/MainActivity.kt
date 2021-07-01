@@ -42,6 +42,11 @@ fun MyApp(content: @Composable () -> Unit){
 }
 
 @Composable
+fun Counter(){
+
+}
+
+@Composable
 fun MyScreenContent(names: List<String> = listOf("Android", "There")){
     Column{
        for(name in names){
