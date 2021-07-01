@@ -60,7 +60,7 @@ fun MyScreenContent(names: List<String> = listOf("Android", "There")){
             Greeting(name = name)
            Divider(color = Color.Black)
        }
-        Divider(color = Color.Transparent)
+        Divider(color = Color.Transparent, thickness = 32.dp)
     }
 }
 
