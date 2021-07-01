@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyApp(){
+fun MyApp(content : @Composable() -> Unit){
     ComposeBasicsTheme {
         Surface {
             Greeting(name = "Android")
