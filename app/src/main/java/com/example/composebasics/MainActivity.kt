@@ -46,6 +46,7 @@ fun MyScreenContent(){
     Column{
         Greeting(name = "Android")
         Divider(color = Color.Black)
+        Greeting(name = "There")
     }
 }
 
