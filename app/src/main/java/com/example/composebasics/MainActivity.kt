@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -44,6 +45,7 @@ fun MyApp(content: @Composable () -> Unit){
 fun MyScreenContent(){
     Column{
         Greeting(name = "Android")
+        Divider(color = Color.Black)
     }
 }
 
