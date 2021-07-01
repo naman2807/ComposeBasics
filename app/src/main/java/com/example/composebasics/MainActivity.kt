@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.example.composebasics.ui.theme.ComposeBasicsTheme
 
@@ -30,12 +31,17 @@ class MainActivity : ComponentActivity() {
 //Watch out for the extra parentheses in @Composable() when using a Composable function as
 // a parameter. Since the annotation is applied on a function, they're needed!
 @Composable
-fun MyApp(content : @Composable() -> Unit){
+fun MyApp(content: @Composable () -> Unit){
     ComposeBasicsTheme {
         Surface {
             content()
         }
     }
+}
+
+@Composable
+fun MyScreenContent(){
+
 }
 
 @Composable
