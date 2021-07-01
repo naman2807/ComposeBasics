@@ -61,7 +61,10 @@ fun MyScreenContent(names: List<String> = listOf("Android", "There")){
            Divider(color = Color.Black)
        }
         Divider(color = Color.Transparent, thickness = 32.dp)
-        Counter()
+        Counter(count = counterState.value,
+            updateCount = { newCount ->
+                counterState.value = newCount
+            })
     }
 }
 
