@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 fun MyApp(){
     ComposeBasicsTheme {
         Surface {
-
+            Greeting(name = "Android")
         }
     }
 }
