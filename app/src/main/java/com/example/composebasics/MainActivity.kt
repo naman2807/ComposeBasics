@@ -55,6 +55,7 @@ fun Counter(){
 
 @Composable
 fun MyScreenContent(names: List<String> = listOf("Android", "There")){
+    val counterState = remember { mutableStateOf(0) }
     Column{
        for(name in names){
             Greeting(name = name)
