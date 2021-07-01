@@ -49,7 +49,7 @@ fun MyApp(content: @Composable () -> Unit){
 fun Counter(){
     val count = remember { mutableStateOf(0) }
     Button(onClick = { count.value++ }) {
-
+        Text("I've been clicked ${count.value} times")
     }
 }
 
