@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -56,11 +57,14 @@ fun Counter(count: Int, updateCount: (Int) -> Unit){
 fun MyScreenContent(names: List<String> = listOf("Android", "There")){
     val counterState = remember { mutableStateOf(0) }
     Column{
-       for(name in names){
-            Greeting(name = name)
-           Divider(color = Color.Black)
-       }
-        Divider(color = Color.Transparent, thickness = 32.dp)
+        Column(modifier = Modifier.weight(1f)) {
+            for(name in names){
+                Greeting(name = name)
+                Divider(color = Color.Black)
+            }
+            Divider(color = Color.Transparent, thickness = 32.dp)
+        }
+
         Counter(count = counterState.value,
             updateCount = { newCount ->
                 counterState.value = newCount
