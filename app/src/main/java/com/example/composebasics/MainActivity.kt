@@ -60,7 +60,7 @@ fun Counter(count: Int, updateCount: (Int) -> Unit){
 }
 
 @Composable
-fun MyScreenContent(names: List<String> = listOf("Android", "There")){
+fun MyScreenContent(names: List<String> = List(1000) { "Hello Android #$it" }){
     val counterState = remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxHeight()){
         Column(modifier = Modifier.weight(1f)) {
