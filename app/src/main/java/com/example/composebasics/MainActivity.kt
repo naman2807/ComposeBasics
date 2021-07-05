@@ -3,6 +3,7 @@ package com.example.composebasics
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -88,6 +89,7 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
 @Composable
 fun Greeting(name: String) {
     var isSelected by remember { mutableStateOf(false) }
+    val backgroundColor by animateColorAsState(if (isSelected) Color.Red else Color.Transparent)
     Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
 }
 
