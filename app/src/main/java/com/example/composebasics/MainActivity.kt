@@ -91,6 +91,12 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
 //animateColorAsState takes a Color as a parameter, saves it and generates automatically
 // the intermediate colors required to display an animated transition from the previously
 // set color to the new one.
+
+//As isSelected state is hoisted in the Greeting composable, the NameList will not keep
+// track if its items are selected or not. Once items are scrolled out of the screen,
+// their states will be set to false. The behavior is intended as the goal of this
+// exercise is to keep a simple list. To keep track of selected items in the list,
+// their isSelected state should be hoisted at the NameList level.
 @Composable
 fun Greeting(name: String) {
     var isSelected by remember { mutableStateOf(false) }
