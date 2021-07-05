@@ -16,6 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.example.composebasics.ui.theme.ComposeBasicsTheme
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,8 +87,10 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
 
 @Composable
 fun Greeting(name: String) {
+    var isSelected by remember { mutableStateOf(false) }
     Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
 }
+
 
 @Preview(showBackground = true)
 @Composable
