@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -76,9 +77,14 @@ fun MyScreenContent(names: List<String> = listOf("Android", "There")){
     }
 }
 
+//LazyColumn renders only the visible items on screen, allowing performance gains when
+// rendering a big list. It is equivalent to RecyclerView in Android Views.
+//LazyColumn doesn't recycle its children like RecyclerView. It emits new Composables
+// as you scroll through it and is still performant as emitting Composables is relatively
+// cheap compared to instantiating Android Views.
 @Composable
 fun NameList(names: List<String>, modifier: Modifier = Modifier) {
-    Column(modifier = modifier) {
+    LazyColumn(modifier = modifier) {
         for (name in names) {
             Greeting(name = name)
             Divider(color = Color.Black)
