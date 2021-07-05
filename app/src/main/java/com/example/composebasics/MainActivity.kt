@@ -3,10 +3,7 @@ package com.example.composebasics
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
@@ -63,14 +60,7 @@ fun Counter(count: Int, updateCount: (Int) -> Unit){
 fun MyScreenContent(names: List<String> = List(1000) { "Hello Android #$it" }){
     val counterState = remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxHeight()){
-        Column(modifier = Modifier.weight(1f)) {
-            for(name in names){
-                Greeting(name = name)
-                Divider(color = Color.Black)
-            }
-            Divider(color = Color.Transparent, thickness = 32.dp)
-        }
-
+        NameList(names = names, Modifier.weight(1f))
         Counter(count = counterState.value,
             updateCount = { newCount ->
                 counterState.value = newCount
