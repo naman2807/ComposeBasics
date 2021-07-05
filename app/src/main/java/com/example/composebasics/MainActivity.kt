@@ -77,6 +77,11 @@ fun MyScreenContent(names: List<String> = listOf("Android", "There")){
 }
 
 @Composable
+fun NameList(names: List<String>, modifier: Modifier = Modifier) {
+
+}
+
+@Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
 }
