@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -86,11 +88,17 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
     }
 }
 
+//animateColorAsState takes a Color as a parameter, saves it and generates automatically
+// the intermediate colors required to display an animated transition from the previously
+// set color to the new one.
 @Composable
 fun Greeting(name: String) {
     var isSelected by remember { mutableStateOf(false) }
     val backgroundColor by animateColorAsState(if (isSelected) Color.Red else Color.Transparent)
-    Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
+    Text(text = "Hello $name!", modifier = Modifier
+        .padding(24.dp)
+        .background(color = backgroundColor)
+        .clickable(onClick = { isSelected = !isSelected }))
 }
 
 
