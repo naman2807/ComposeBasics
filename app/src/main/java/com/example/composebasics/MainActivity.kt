@@ -81,7 +81,7 @@ fun NameList(names: List<String>, modifier: Modifier = Modifier) {
     Column(modifier = modifier) {
         for (name in names) {
             Greeting(name = name)
-
+            Divider(color = Color.Black)
         }
     }
 }
