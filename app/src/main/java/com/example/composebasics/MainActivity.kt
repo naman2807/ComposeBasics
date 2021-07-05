@@ -78,7 +78,9 @@ fun MyScreenContent(names: List<String> = listOf("Android", "There")){
 
 @Composable
 fun NameList(names: List<String>, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
 
+    }
 }
 
 @Composable
